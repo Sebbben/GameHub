@@ -1,0 +1,39 @@
+.game-nav {
+    text-align: center;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+.game-nav a {
+    transition: inherit;
+    display: block;
+    color: #000;
+    position: relative;
+    box-sizing: content-box;
+    font-size: 75px;
+    height: 100%;
+    width: 100%;
+    padding: inherit;
+}
+.game-nav li {
+    width: 75vw;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    font-size: 1.25em;
+    padding: 10px 0;
+    color: #000;
+    margin: 10px;
+    transition: 0.6s;
+    top: 100vh;
+    background-color: #fff;
+    border: 2px solid #fff;
+    text-align: center;
+}   
+
+.game-nav li:hover a{
+    color: #fff;
+}
+
+.game-nav li:hover {
+    background: rgba(0,0,0,0);
+}

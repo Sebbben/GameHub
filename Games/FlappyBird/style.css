@@ -1,0 +1,8 @@
+canvas {
+    border:1px solid #001eff;
+    background-color: #001eff;
+}
+
+body {
+    overflow: hidden;
+}
