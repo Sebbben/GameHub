@@ -9,13 +9,13 @@
     color: #000;
     position: relative;
     box-sizing: content-box;
-    font-size: 75px;
+    font-size: 2em;
     height: 100%;
     width: 100%;
     padding: inherit;
 }
 .game-nav li {
-    width: 75vw;
+    width: 25vw;
     height: 100px;
     display: inline-block;
     position: relative;
@@ -24,7 +24,7 @@
     color: #000;
     margin: 10px;
     transition: 0.6s;
-    top: 100vh;
+    top: 110vh;
     background-color: #fff;
     border: 2px solid #fff;
     text-align: center;
@@ -38,7 +38,7 @@
 .game-nav li:hover {
     background: rgba(0,0,0,0);
     border-radius: 10px;
-   text-align: center;
+    text-align: center;
     border-radius: 0;
 }   
 

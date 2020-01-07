@@ -69,9 +69,27 @@ body::-webkit-scrollbar {
     transform: translate(-50%, -50%);
 }
 
+.sub-title{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 79.5vw;
+    height: 5em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 .title h1{
     color: #fff;
     font-size: 70px;
+}
+
+.sub-title h1{
+    position: relative;
+    color: #fff;
+    font-size: 50px;
+    top: 10px;
+    color: #fff;
 }
 
 .button {
@@ -94,4 +112,5 @@ body::-webkit-scrollbar {
 .btn:hover{
     background-color: #fff;
     color: #000;
+    border-radius: 5px;
 }
