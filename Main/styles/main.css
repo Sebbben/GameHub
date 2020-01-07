@@ -15,7 +15,7 @@ a {
 }
 
 .bg {
-    background: #ffffff url("../../Main/img/bg.jpeg") no-repeat center;
+    background: #ffffff url("../../Img/main-bg.jpeg") no-repeat center;
     background-size: cover;
     /* Set rules to fill background */
     min-height: 100%;
@@ -33,7 +33,7 @@ a {
 
 body::after {
     content: "";
-    background: #ffffff url("/Main/img/bg.jpeg") no-repeat center;
+    background: #ffffff url("../../Img/main-bg.jpeg") no-repeat center;
     height: 100vh;
     background-size: cover;
     background-attachment:fixed;
