@@ -15,11 +15,11 @@ a {
 }
 
 .bg {
-    background: #ffffff url("/Main/img/bg.jpeg") no-repeat center;
+    background: #ffffff url("../../Main/img/bg.jpeg") no-repeat center;
     background-size: cover;
     /* Set rules to fill background */
     min-height: 100%;
-    min-width: 1024px;
+    min-width: auto;
         
     /* Set up proportionate scaling */
     width: 100%;
@@ -60,6 +60,7 @@ body::-webkit-scrollbar {
     height: auto;
     width: 4em;
     margin: 0 5px;
+    z-index: +3;
 }
 
 .title{

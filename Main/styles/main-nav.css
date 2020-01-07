@@ -1,5 +1,5 @@
 .main-nav {
-    max-width: 1200px;
+    width: 100vw;
     margin: auto;
 }
 
@@ -16,10 +16,13 @@
 }
 
 .main-nav li {
+    position: relative;
+    left: 100px;
     float: left;
 }
 
 .main-nav ul {
+    width: 100vw;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -28,6 +31,6 @@
     position: fixed;
     top: 0px;
     right: 0px;
-    left: 100px;
+    left: 0;
     z-index: +1;
 }
