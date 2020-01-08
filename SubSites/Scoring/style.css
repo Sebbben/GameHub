@@ -68,14 +68,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .title{
     position: absolute;
     top: 15%;
     left: 7%;
-    color: black;
+    color: #fff;
     font-size: 75x;
     width: 79.5vw;
     height: 5em;
@@ -88,7 +88,7 @@
     position: absolute;
     top: 23%;
     left: 5%;
-    color: black;
+    color: #fff;
     font-size: 35x;
     width: 90vw;
 }
