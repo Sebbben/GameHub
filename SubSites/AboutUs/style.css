@@ -82,9 +82,14 @@
     border: 2px solid #000;
     border-radius: 0 50px;
 }
+.title h1 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 .text{
     position: absolute;
-    top: 23%;
+    top: 30%;
     left: 5%;
     color: black;
     font-size: 35x;
