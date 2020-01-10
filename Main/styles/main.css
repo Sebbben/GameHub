@@ -30,7 +30,7 @@ a {
     top: 0;
     left: 0;
 }
-
+}
 body::after {
     content: "";
     background: #ffffff url("../../Img/main-bg.jpeg") no-repeat center;
