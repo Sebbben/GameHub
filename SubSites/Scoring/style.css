@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,22 +17,22 @@
 .main-nav li a {
     display: block;
     color: white;
-    
+
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .logo img {
-        position: fixed;
-        top: 0px;
-        left: 12.5px;
-        width: 250px;
-        height: auto;
-        width: 4em;
-        margin: 0 5px;
-        z-index: +3;
-    }
+    position: fixed;
+    top: 0px;
+    left: 12.5px;
+    width: 250px;
+    height: auto;
+    width: 4em;
+    margin: 0 5px;
+    z-index: +3;
+}
 
 .main-nav li {
     position: relative;
@@ -53,17 +53,17 @@
     z-index: +1;
 }
 
-.backround{
+.backround {
     background: #ffffff url("../../Img/subsite-bg.jpeg") no-repeat center;
     background-size: cover;
     /* Set rules to fill background */
     min-height: 100%;
     min-width: auto;
-        
+
     /* Set up proportionate scaling */
     width: 100%;
     height: auto;
-        
+
     /* Set up positioning */
     position: fixed;
     top: 0;
@@ -71,34 +71,13 @@
     opacity: 0.9;
 }
 
-.title{
-    background-image: linear-gradient(170deg, rgba(0,0,0,0), rgba(255,255,255,7.5));
-    position: absolute;
-    top: 15%;
-    left: 7%;
-    color: #fff;
-    font-size: 75x;
-    width: 79.5vw;
-    height: 5em;
-    border: 2px solid #fff;
-    border-radius: 5px 50px;
-}
-
 .title h1 {
     margin-top: 10px;
     margin-left: 20px;
 }
 
-.text{
-    position: absolute;
-    top: 30%;
-    left: 7%;
-    color: #fff;
-    font-size: 35x;
-    width: 90vw;
-}
-.title{
-    background-image: linear-gradient(170deg, rgba(0,0,0,0), rgba(255,255,255,7.5));
+.title {
+    background-image: linear-gradient(170deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 7.5));
     position: absolute;
     top: 15%;
     left: 7%;
@@ -110,18 +89,24 @@
     border-radius: 5px 50px;
 }
 
-.text{
+.text {
+    margin: 0;
     position: absolute;
     top: 30%;
-    left: 7%;
     color: #fff;
     font-size: 35x;
-    width: 90vw;
+    width: 100vw;
 }
 
-th,tr,td {
+th,
+tr,
+td {
     border: 2px solid #fff;
     padding: 7.5px 25px;
+    margin: 0;
+}
+
+.text table {
     border-collapse: separate;
-    border-spacing: 5px;
+    border-spacing: 10vw 10px;
 }
