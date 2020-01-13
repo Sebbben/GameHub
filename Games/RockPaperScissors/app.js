@@ -10,16 +10,15 @@ const scissors_div = document.getElementById("s");
 
 
 function getAIChoice() {
-    const choices = ['r','p','s'];
-    const randomNumber = Math.floor(Math.random() * 3);
+    const choices = ['r', 'p', 's'];
+    var randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
 }
-getAIChoice();
 
 function convertToWord(letter) {
-    if (letter === "r") return rock;
-    if (letter === "p") return paper;
-   else return "scissors";
+    if (letter === "r") return "Rock";
+    else if (letter === "p") return "Paper";
+    else return "Scissors";
 }
 
 function win(userChoice, AIChoice) {
@@ -28,8 +27,8 @@ function win(userChoice, AIChoice) {
     AIScore_span.innerHTML = AIScore;
     const smalluserWord = "(user)".fontsize(3);
     const smallAIWord = "(AI)".fontsize(3);
-    result_p.innerHTML = userChoice + (smalluserWord) + "Beats" + AIScore + (smallAIWord) + ". You win!";
-    
+    result_p.innerHTML = convertToWord(userChoice) + (smalluserWord) + " Beats " + convertToWord(AIChoice) + (smallAIWord) + ". You win!";
+
 }
 
 function lose(userChoice, AIChoice) {
@@ -38,19 +37,19 @@ function lose(userChoice, AIChoice) {
     AIScore_span.innerHTML = AIScore;
     const smalluserWord = "(user)".fontsize(3);
     const smallAIWord = "(AI)".fontsize(3);
-    result_p.innerHTML =  AIScore + (smallAIWord) + "Beats" + userChoice + (smalluserWord)  + ". You lose!";
-    
+    result_p.innerHTML = convertToWord(AIChoice) + (smallAIWord) + " Beats " + convertToWord(userChoice) + (smalluserWord) + ". You lose!";
+
 }
 
 function draw(userChoice, AIChoice) {
     const smalluserWord = "(user)".fontsize(3);
     const smallAIWord = "(AI)".fontsize(3);
-    result_p.innerHTML = userChoice + (smalluserWord) + "draws with" + AIScore + (smallAIWord) + ". It's a draw!";
+    result_p.innerHTML = convertToWord(userChoice) + (smalluserWord) + "draws with " + convertToWord(AIChoice) + (smallAIWord) + ". It's a draw!";
 }
 
-function game(userChoice){
+function game(userChoice) {
     const AIChoice = getAIChoice();
-    switch (userChoice + AIChoice){
+    switch (userChoice + AIChoice) {
         case "rs":
         case "pr":
         case "sp":
@@ -60,27 +59,24 @@ function game(userChoice){
         case "ps":
         case "sr":
             lose(userChoice, AIChoice);
-        break;
+            break;
         case "rr":
         case "pp":
         case "ss":
             draw(userChoice, AIChoice);
             break;
-            
-    }}
-    
 
-
-function main() {
-    rock_div.addEventListener('click', function() {
-        game("r");
-        })
-    paper_div.addEventListener('click', function() {
-        game("p");
-            })
-    scissors_div.addEventListener('click', function() {
-        game("s");
-                })
+    }
 }
-    
-main ();
+
+
+
+rock_div.addEventListener('click', function () {
+    game("r");
+})
+paper_div.addEventListener('click', function () {
+    game("p");
+})
+scissors_div.addEventListener('click', function () {
+    game("s");
+})
