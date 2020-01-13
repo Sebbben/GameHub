@@ -44,7 +44,7 @@ function lose(userChoice, AIChoice) {
 function draw(userChoice, AIChoice) {
     const smalluserWord = "(user)".fontsize(3);
     const smallAIWord = "(AI)".fontsize(3);
-    result_p.innerHTML = convertToWord(userChoice) + (smalluserWord) + "draws with " + convertToWord(AIChoice) + (smallAIWord) + ". It's a draw!";
+    result_p.innerHTML = convertToWord(userChoice) + (smalluserWord) + " draws with " + convertToWord(AIChoice) + (smallAIWord) + ". It's a draw!";
 }
 
 function game(userChoice) {
