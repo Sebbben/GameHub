@@ -1,8 +1,11 @@
 * {
   padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
+  
   text-align: center;
 }
 
@@ -29,13 +32,14 @@ li {
   height: 5vw;
   background-color: #666;
   display: table-cell;
-  margin: 10px;
+  margin: 40px;
   text-align: center;
   vertical-align: middle;
   cursor: default;
 }
 
 #mainContainer {
+  
   display: block;
   background: #444;
   position: absolute;
@@ -47,4 +51,56 @@ li {
 
 li:hover {
   background-color: #555;
+}
+
+nav{
+  background-color: #444;
+  margin: 15px;
+}
+.title{
+  border: 15px 40px black;
+  color: #fff;
+}
+
+img {
+  border-radius: 4px;
+  padding: 5px;
+  width: 70px;
+  float: left;
+}
+.main-nav {
+  width: 100vw;
+  margin: auto;
+}
+
+.main-nav li a:hover {
+  background-color: #111;
+}
+
+.main-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main-nav li {
+  position: relative;
+  left: 100px;
+  float: left;
+}
+
+.main-nav ul {
+  width: 100vw;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 0;
+  z-index: +1;
 }
