@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Simon game</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <div id="top-left" onclick="main('green')"></div>
-        <div id="top-right" onclick="main('red')"></div>
-        <div id="bottom-left" onclick="main('yellow')"></div>
-        <div id="bottom-right" onclick="main('blue')"></div>
+      <div id="top-left" onclick="main('green')"></div>
+      <div id="top-right" onclick="main('red')"></div>
+      <div id="bottom-left" onclick="main('yellow')"></div>
+      <div id="bottom-right" onclick="main('blue')"></div>
     </div>
     <button onclick="startGame();this.remove()">Start game</button>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
