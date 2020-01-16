@@ -3,48 +3,41 @@ const topRight = document.getElementById("top-right");
 const bottomLeft = document.getElementById("bottom-left");
 const bottomRight = document.getElementById("bottom-right");
 var colors = [];
+var score = 0;
 var currentIndex = 0;
+var pCounter = document.createElement("p");
+
 
 function lightUp(color) {
   if (color == "green") {
     topLeft.style.opacity = 0.5;
-    setTimeout(function() {
+    setTimeout(function () {
       topLeft.style = "";
     }, 500);
   } else if (color == "red") {
     topRight.style.opacity = 0.5;
-    setTimeout(function() {
+    setTimeout(function () {
       topRight.style = "";
     }, 500);
   } else if (color == "yellow") {
     bottomLeft.style.opacity = 0.5;
-    setTimeout(function() {
+    setTimeout(function () {
       bottomLeft.style = "";
     }, 500);
   } else {
     bottomRight.style.opacity = 0.5;
-    setTimeout(function() {
+    setTimeout(function () {
       bottomRight.style = "";
     }, 500);
   }
 }
 
 function main(pickedColor) {
-  if (pickedColor == colors[currentIndex]) {
-    currentIndex++;
-    console.log(currentIndex);
-    i = 0;
-    function displayColors(i) {
-      if (i < colors.length) {
-        setTimeout(() => {
-          i++;
-          lightUp(colors[i]);
-          displayColors(i);
-        }, 500);
-      }
-    }
-    displayColors(0);
-  }
+  lightUp
+
+}
+
+pCounter.innerHTML = score;
 }
 
 function newColor() {
@@ -62,6 +55,14 @@ function newColor() {
 }
 
 function startGame() {
+  var pCounter = document.createElement("p");
+  pCounter.style.position = "fixed";
+  pCounter.style.top = "50%";
+  pCounter.style.left = "50%";
+  pCounter.style.transform = "translate(-50%,-50%)";
+  pCounter.style.color = "black";
+  pCounter.innerHTML = score;
+  document.body.append(pCounter);
   newColor();
   lightUp(colors[0]);
 }
