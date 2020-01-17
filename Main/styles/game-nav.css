@@ -1,11 +1,13 @@
 .game-nav {
     text-align: center;
-    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 2s;
+    /* For Safari 3.1 to 6.0 */
     transition: width 2s;
 }
+
 .game-nav a {
     transition: inherit;
-    display: block;
+    display: inline-block;
     color: #000;
     position: relative;
     box-sizing: content-box;
@@ -13,7 +15,9 @@
     height: 100%;
     width: 100%;
     padding: inherit;
+    vertical-align: middle;
 }
+
 .game-nav li {
     width: 25vw;
     height: 100px;
@@ -29,58 +33,59 @@
     border: 2px solid #fff;
     text-align: center;
     border-radius: 0;
-}   
+}
 
-.game-nav li:hover a{
+.game-nav li:hover a {
     color: #fff;
 }
 
 .game-nav li:hover {
-    background: rgba(0,0,0,0);
+    cursor: url("../../Img/play.jpg"), auto;
+    background: rgba(0, 0, 0, 0);
     border-radius: 10px;
     text-align: center;
     border-radius: 0;
-}   
+}
 
-.game-nav li:hover a{
+.game-nav li:hover a {
     color: #fff;
 }
 
 .game-nav li:hover {
-    background: rgba(0,0,0,0);
-    border-radius: 10px;
-   text-align: center;
-    border-radius: 0;
-}   
-
-.game-nav li:hover a{
-    color: #fff;
-}
-
-.game-nav li:hover {
-    background: rgba(0,0,0,0);
-    border-radius: 10px;
-
-   text-align: center;
-    border-radius: 0;
-}   
-
-.game-nav li:hover a{
-    color: #fff;
-}
-
-.game-nav li:hover {
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     border-radius: 10px;
     text-align: center;
     border-radius: 0;
-}   
+}
 
-.game-nav li:hover a{
+.game-nav li:hover a {
     color: #fff;
 }
 
 .game-nav li:hover {
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+
+    text-align: center;
+    border-radius: 0;
+}
+
+.game-nav li:hover a {
+    color: #fff;
+}
+
+.game-nav li:hover {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    border-radius: 0;
+}
+
+.game-nav li:hover a {
+    color: #fff;
+}
+
+.game-nav li:hover {
+    background: rgba(0, 0, 0, 0);
     border-radius: 10px;
 }

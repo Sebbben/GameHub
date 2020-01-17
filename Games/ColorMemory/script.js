@@ -3,6 +3,7 @@ const topRight = document.getElementById("top-right");
 const bottomLeft = document.getElementById("bottom-left");
 const bottomRight = document.getElementById("bottom-right");
 var colors = [];
+var colorDup = [].concat(colors)
 var score = 0;
 var currentIndex = 0;
 var pCounter = document.createElement("p");
@@ -32,12 +33,25 @@ function lightUp(color) {
   }
 }
 
-function main(pickedColor) {
-  lightUp
-
-}
-
-pCounter.innerHTML = score;
+function getInputs(pickedColor) {
+  lightUp(pickedColor);
+  if (pickedColor == colorDup[0]) {
+    colorDup.shift()
+  } else lose()
+  if (colorDup.length == 0) {
+    newColor()
+    colorDup = [].concat(colors);
+    score++;
+    document.getElementById("score").innerHTML = score;
+    var i = 0;
+    var loop = setInterval(() => {
+      lightUp(colors[i])
+      i++;
+      if (i >= colors.length) {
+        clearInterval(loop)
+      }
+    }, 1000);
+  }
 }
 
 function newColor() {
@@ -61,8 +75,25 @@ function startGame() {
   pCounter.style.left = "50%";
   pCounter.style.transform = "translate(-50%,-50%)";
   pCounter.style.color = "black";
+  pCounter.id = "score"
   pCounter.innerHTML = score;
   document.body.append(pCounter);
   newColor();
+  colorDup = [].concat(colors)
   lightUp(colors[0]);
+}
+
+function lose() {
+  const myNode = document.body;
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  }
+  document.body.style.backgroundColor = "red";
+  var loseText = document.createElement("h1");
+  loseText.innerHTML = "You lose";
+  loseText.style.position = "fixed"
+  loseText.style.left = "50%"
+  loseText.style.top = "50%"
+  loseText.style.transform = "translate(-50%,-50%)"
+  document.body.append(loseText)
 }
