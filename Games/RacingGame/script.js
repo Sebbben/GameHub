@@ -11,9 +11,12 @@ var area = [
   ["", "", "", "", "", "", "", ""],
   ["", "", "", "", "", "", "", ""]
 ];
+var area2 = [
+  [1, 2],
+  [3, 4]
+];
 
-function createArea() {
-  clearArea()
+function createArea(area) {
   for (i = 0; i < area.length; i++) {
     var row = document.createElement("div")
     for (j = 0; j < area[i].length; j++) {
@@ -33,8 +36,8 @@ function updateArea(area, x, y) {
   mainContainer.children[y].children[x].classList.add("selected")
 }
 
-function clearArea() {
-  const myNode = mainContainer;
+function clearArea(clearArea) {
+  const myNode = clearArea;
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
   }
@@ -57,7 +60,8 @@ window.addEventListener("keypress", (e) => {
   updateArea(area, x, y)
 })
 
-createArea()
+createArea(area)
+createArea(area2)
 
 function clamp(num, min, max) {
   return num < min ? min : num > max ? max : num;
