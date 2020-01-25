@@ -1,78 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pong</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        var WIDTH = 700,
-            HEIGHT = 600,
-            pi = math.pi;
-        var canvas, ctx, keystate;
-        var player, ai, ball;
+      var WIDTH = 700,
+        HEIGHT = 600,
+        pi = Math.pi;
+      var canvas, ctx, keystate;
+      var player, ai, ball;
 
+      player = {
+        x: null,
+        y: null,
 
-        player = {
-            x = null,
-            y = null,
+        update: function() {},
+        draw: function() {
+          ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+      };
+      ai = {
+        x: null,
+        y: null,
 
-            update = function () {
+        update: function() {},
+        draw: function() {
+          ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+      };
+      ball = {
+        x: null,
+        y: null,
 
-            },
-            draw = function () {
-                ctx.fillRect(this.x, this.y, this.width, this.height);
-            }
+        update: function() {},
+        draw: function() {
+          ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+      };
+
+      function main() {
+        canvas = document.createElement("canvas");
+        canvas.width = WIDTH;
+        canvas.height = HEIGHT;
+        ctx = canvas.getContext("2d");
+        document.body.appendChild(canvas);
+
+        init();
+
+        var loop = function() {
+          update();
+          draw();
+
+          window.requestAnimationFrame(loop, canvas);
         };
-        ai = {
-            x = null,
-            y = null,
+        window.requestAnimationFrame(loop, canvas);
+      }
 
-            update = function () {},
-            draw = function () {
-                ctx.fillRect(this.x, this.y, this.width, this.height);
-            }
-        }
-        ball = {
-            x = null,
-            y = null,
+      init();
 
-            update = function () {},
-            draw = function () {
-                ctx.fillRect(this.x, this.y, this.width, this.height);
-            }
-        }
+      update();
 
-        function main() {
-            canvas = document.createElement("canvas");
-            canvas.width = WIDTH;
-            canvas.height = HEIGHT;
-            ctx = canvas.getContext("2d");
-            document.body.appendChild(canvas);
+      draw();
 
-            init();
-
-            var loop = function () {
-                update();
-                draw();
-
-                window.requestAnimationFrame(loop, canvas);
-            };
-            window.requestAnimationFrame(loop, canvas);
-        }
-
-        function init() {}
-
-        function update() {}
-
-        function draw() {}
-
-        function main();
+      main();
     </script>
-</body>
-
+  </body>
 </html>
