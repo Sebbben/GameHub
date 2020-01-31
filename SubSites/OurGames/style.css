@@ -88,6 +88,10 @@ body {
   max-width: 100%;
 }
 
+.text h3 {
+  max-width: 79.5vw;
+}
+
 .games {
   display: inline;
   position: absolute;
