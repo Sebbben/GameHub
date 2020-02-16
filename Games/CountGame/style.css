@@ -5,7 +5,6 @@
 }
 
 body {
-  
   text-align: center;
 }
 
@@ -27,37 +26,11 @@ button:hover {
   background-color: #999;
 }
 
-li {
-  width: 5vw;
-  height: 5vw;
-  background-color: #666;
-  display: table-cell;
-  margin: 40px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: default;
-}
-
-#mainContainer {
-  
-  display: block;
-  background: #444;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-}
-
-li:hover {
-  background-color: #555;
-}
-
-nav{
+nav {
   background-color: #444;
   margin: 15px;
 }
-.title{
+.title {
   border: 15px 40px black;
   color: #fff;
 }
@@ -69,38 +42,21 @@ img {
   float: left;
 }
 .main-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-100%, -50%);
   width: 100vw;
-  margin: auto;
-}
-
-.main-nav li a:hover {
-  background-color: #111;
-}
-
-.main-nav li a {
-  display: block;
-  color: white;
+  height: 10vw;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.main-nav li {
-  position: relative;
-  left: 100px;
-  float: left;
+  background-color: #444;
 }
 
 .main-nav ul {
-  width: 100vw;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  left: 0;
-  z-index: +1;
+}
+
+.main-nav li {
+}
+
+.main-nav li a {
 }
