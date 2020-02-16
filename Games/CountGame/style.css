@@ -6,6 +6,7 @@
 
 body {
   text-align: center;
+  background-color: rgb(179, 179, 179);
 }
 
 input {
@@ -33,7 +34,7 @@ nav {
 }
 .title {
   /* border: 2px solid black; */
-  color: #fff;
+  color: rgb(179, 179, 179);
 }
 
 img {
