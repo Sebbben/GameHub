@@ -23,3 +23,11 @@
   width: 5.25vh;
   height: 5.25vh;
 }
+
+.snake {
+  background-color: #fff;
+}
+
+.apple {
+  background-color: limegreen;
+}
