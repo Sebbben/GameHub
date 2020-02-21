@@ -4,12 +4,16 @@
   margin: 0;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+
 #main-container {
   display: inline;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 #main-container > div {
   height: 5.25vh;

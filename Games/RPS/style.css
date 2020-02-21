@@ -80,7 +80,7 @@ header > h1 {
 }
 
 body {
-  background-color: black;
+  background-color: #222225;
 }
 
 .logo img {
@@ -92,4 +92,34 @@ body {
   width: 4em;
   margin: 0 5px;
   z-index: +3;
+}
+
+.main-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 10vw;
+  text-align: center;
+  background-color: #444;
+}
+
+.main-nav li {
+  display: inline-block;
+  height: 10vw;
+  width: 10vw;
+  background-color: #666;
+  margin: 0 10px;
+}
+
+.main-nav li a {
+  position: fixed;
+  text-decoration: none;
+  transform: translateX(-50%);
+  color: black;
+  height: inherit;
+  width: inherit;
+}
+
+.main-nav li a:hover {
+  background-color: #999;
 }

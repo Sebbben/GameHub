@@ -43,7 +43,6 @@ function onLoopTimer() {
     )
   ) {
     clearInterval(mainLoop);
-    alert("You lose");
   }
   if (
     mainContainer.children[playerY].children[playerX].classList.contains(
@@ -52,10 +51,17 @@ function onLoopTimer() {
   ) {
     mainContainer.children[playerY].children[playerX].classList.remove("apple");
     length++;
+    // console.log(snake);
+    for (i = 0; i < snake.length; i++) {
+      snake[i]["dur"]++;
+    }
+    // snake.push(snake[0]);
+    // snake[snake.length - 1]["dur"] = 0;
     appleX = Math.floor(Math.random() * size);
     appleY = Math.floor(Math.random() * size);
     mainContainer.children[appleY].children[appleX].classList.add("apple");
   }
+  console.log(snake.map(a => a.dur));
   getLonger();
   draw();
 }
@@ -98,4 +104,4 @@ mainContainer.children[appleY].children[appleX].classList.add("apple");
 
 var mainLoop = setInterval(() => {
   onLoopTimer();
-}, 1000); // main loop
+}, 500); // main loop
