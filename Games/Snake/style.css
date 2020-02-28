@@ -1,3 +1,37 @@
 * {
-    background-color: #fff;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+
+#main-container {
+  display: inline;
+  position: fixed;
+}
+#main-container > div {
+  height: 5.25vh;
+  width: 100vw;
+}
+
+.playArea {
+  background-color: red;
+  color: #000;
+  display: inline-block;
+  width: 5.25vh;
+  height: 5.25vh;
+}
+
+.snake {
+  background-color: #fff;
+}
+
+.apple {
+  background-color: limegreen;
 }

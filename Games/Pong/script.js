@@ -1,59 +1,48 @@
-var WIDTH = 700,
-  HEIGHT = 600,
-  pi = Math.pi;
-var canvas, ctx, keystate;
-var player, ai, ball;
+const canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-player = {
-  x: null,
-  y: null,
-
-  update: function() {},
+var ball = {
+  x: 300,
+  y: 300,
+  speed: 3,
+  dir: 0,
+  update: function() {
+    this.x += Math.sin(this.dir);
+    this.y += Math.sin(90 - this.dir);
+    if (this.x < 0) {
+    }
+  },
   draw: function() {
-    ctx.fillRect(this.x, this.y, this.width, this.height);
-  }
-};
-ai = {
-  x: null,
-  y: null,
-
-  update: function() {},
-  draw: function() {
-    ctx.fillRect(this.x, this.y, this.width, this.height);
-  }
-};
-ball = {
-  x: null,
-  y: null,
-
-  update: function() {},
-  draw: function() {
-    ctx.fillRect(this.x, this.y, this.width, this.height);
+    ctx.fillRect(this.x, this.y, 5, 5);
   }
 };
 
-function main() {
-  canvas = document.createElement("canvas");
-  canvas.width = WIDTH;
-  canvas.height = HEIGHT;
-  ctx = canvas.getContext("2d");
-  document.body.appendChild(canvas);
+var player = {
+  x: canvas.width - 10,
+  y: canvas.width / 2,
+  speed: 5,
+  update: function() {},
+  draw: function() {
+    ctx.fillstyle = "grey";
+    ctx.fillRect(this.x, this.y, 10, 70);
+  }
+};
 
-  init();
+function draw() {
+  ctx.canvas.width = window.innerHeight;
+  ctx.canvas.heigth = window.innerHeight;
 
-  var loop = function() {
-    update();
-    draw();
-
-    window.requestAnimationFrame(loop, canvas);
-  };
-  window.requestAnimationFrame(loop, canvas);
+  player.draw();
+  ball.draw();
 }
 
-init();
+function update() {
+  player.update();
+  ball.update();
+}
 
-update();
-
-draw();
-
-main();
+function main() {
+  update();
+  draw();
+}
+setInterval(main, 10);
